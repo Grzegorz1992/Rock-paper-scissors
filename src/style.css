@@ -15,6 +15,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	background: rgb(24, 33, 66);
 	background: radial-gradient(
 		circle,
@@ -24,6 +25,8 @@ body {
 	font-family: "Barlow Semi Condensed", sans-serif;
 	font-size: 1.6rem;
 }
+
+/* HEADER */
 
 .header {
 	display: flex;
@@ -50,10 +53,12 @@ body {
 	flex-direction: column;
 	align-items: center;
 	padding: 0.5em;
-    width: 12rem;
+	width: 12rem;
 	background-color: #f4f0f0;
 	border-radius: 6px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .score-span {
@@ -67,4 +72,67 @@ body {
 	font-size: 5rem;
 	font-weight: bold;
 	color: hsl(229, 25%, 31%);
+}
+
+/* MAIN */
+
+.game-items-box {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 40px;
+}
+
+.game-item {
+	padding: 1.2em;
+	border-radius: 50%;
+	
+}
+
+.paper-item {
+	grid-column: 1/2;
+	background-color: rgb(43, 127, 212);
+	box-shadow: rgb(10, 112, 213) 0px 22px 70px 20px;
+	
+}
+
+.rock-item {
+	grid-column: 3/4;
+	background-color: rgb(214, 118, 39);
+	box-shadow: rgb(177, 94, 25) 0px 22px 70px 20px;
+}
+
+.scissors-item {
+	grid-column: 2 / 3;
+	grid-row: 2;
+	background-color: rgb(199, 45, 45);
+	box-shadow: rgb(133, 25, 25) 0px 22px 70px 20px;
+}
+.image-container {
+	background-color: white;
+	padding: 1.8em;
+	border-radius: 50%;
+	box-shadow: inset 0px 8px 5px rgb(154, 153, 153);
+	cursor: pointer;
+}
+
+.game-image {
+	font-size: 6rem;
+	color: hsl(217, 16%, 45%);
+}
+
+.fa-solid {
+	transform: rotate(-15deg);
+	cursor: pointer;
+}
+
+.fa-hand-scissors {
+	transform: rotate(15deg);
+	cursor: pointer;
+}
+
+.bar {
+	background-color: black;
+	width: 100px;
+	height: 20px;
 }
