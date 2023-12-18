@@ -199,3 +199,25 @@ body.modal-open::before {
 	font-weight: bold;
 	cursor: pointer;
 }
+
+/* ACTIVE GAME BOX */
+
+.active-game-box {
+	display: flex;
+	gap: 200px;
+}
+
+.user-choice-items {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	text-align: center;
+}
+
+.house-choice-items {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	text-align: center;
+
+}
