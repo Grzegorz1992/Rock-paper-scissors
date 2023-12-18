@@ -131,7 +131,7 @@ body.modal-open::before {
 }
 
 .fa-hand-scissors {
-	transform: rotate(15deg);
+	transform: rotate(35deg);
 	cursor: pointer;
 }
 
