@@ -83,7 +83,7 @@ body.modal-open::before {
 /* MAIN */
 
 .game-items-box {
-	display: grid;
+	display: none;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	gap: 40px;
@@ -110,7 +110,7 @@ body.modal-open::before {
 .scissors-item {
 	grid-column: 4/ 5;
 	background-color: rgb(199, 45, 45);
-	box-shadow: rgb(133, 25, 25) 0px 22px 70px 20px;
+	box-shadow: rgb(201, 20, 20) 0px 22px 70px 20px;
 }
 .image-container {
 	background-color: white;
@@ -202,9 +202,9 @@ body.modal-open::before {
 
 /* ACTIVE GAME BOX */
 
-.active-game-box {
+.fight-game-box {
 	display: flex;
-	gap: 200px;
+	gap: 100px;
 }
 
 .user-choice-items {
@@ -219,5 +219,54 @@ body.modal-open::before {
 	flex-direction: column;
 	gap: 50px;
 	text-align: center;
+}
 
+.fight-game-text {
+	color: #fff;
+	letter-spacing: 2px;
+}
+
+.play-again-box {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.play-again-text {
+	color: #fff;
+	letter-spacing: 2px;
+	font-size: 5rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+.play-again-btn {
+	border: none;
+	background-color: #fff;
+	color: rgb(223, 24, 24);
+	padding: 0.5em;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	border-radius: 12px;
+	letter-spacing: 2px;
+	box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+	cursor: pointer;
+}
+
+.fight-game-item {
+	padding: 1.6em;
+	border-radius: 50%;
+}
+
+.fight-image-container {
+	background-color: white;
+	padding: 2.4em;
+	border-radius: 50%;
+	box-shadow: inset 0px 8px 5px rgb(154, 153, 153);
+	cursor: pointer;
+}
+
+.fight-game-image {
+	font-size: 8rem;
+	color: hsl(217, 16%, 45%);
 }
