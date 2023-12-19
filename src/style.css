@@ -83,11 +83,16 @@ body.modal-open::before {
 /* MAIN */
 
 .game-items-box {
-	display: none;
+	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	gap: 40px;
 }
+
+.hide-gime-items {
+	display: none;
+}
+
 
 .game-item {
 	padding: 1.2em;
@@ -203,8 +208,12 @@ body.modal-open::before {
 /* ACTIVE GAME BOX */
 
 .fight-game-box {
-	display: flex;
+	display: none;
 	gap: 100px;
+}
+
+.show-fight-game-box {
+	display: flex;
 }
 
 .user-choice-items {
@@ -227,7 +236,7 @@ body.modal-open::before {
 }
 
 .play-again-box {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	gap: 20px;
 }
