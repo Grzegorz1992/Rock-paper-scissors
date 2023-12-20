@@ -241,6 +241,10 @@ body.modal-open::before {
 	gap: 20px;
 }
 
+.active-play-again-box {
+	display: flex;
+}
+
 .play-again-text {
 	color: #fff;
 	letter-spacing: 2px;

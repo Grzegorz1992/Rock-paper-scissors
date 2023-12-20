@@ -25,6 +25,7 @@ const fightGameBox = document.querySelector(".fight-game-box");
 const gameItemsBox = document.querySelector(".game-items-box");
 const userItemSelect = document.querySelector(".user-choice");
 const houseItemSelect = document.querySelector(".house-choice");
+const playAgainBox = document.querySelector(".play-again-box");
 
 const showModal = () => {
 	rulesModal.classList.add("active");
@@ -53,6 +54,10 @@ const userChoice = (e) => {
 	setTimeout(() => {
 		houseChoice();
 	}, 1000);
+
+	setTimeout(() => {
+		gameResult();
+	}, 1500);
 };
 
 const houseChoice = () => {
@@ -66,6 +71,40 @@ const houseChoice = () => {
         </div>`;
 		}
 	}
+};
+
+const gameResult = () => {
+	const userItem = userItemSelect.querySelector(".fight-game-item").id;
+	const houseItem = houseItemSelect.querySelector(".fight-game-item").id;
+
+	if (userItem === houseItem) {
+		playAgainBox.classList.add("active-play-again-box");
+		playAgainBox.innerHTML = `<p class="play-again-text">DRAW</p>
+		<button class="play-again-btn">play again</button>`;
+	} else if (
+		(userItem === "rock" && houseItem === "scissors") ||
+		(userItem === "paper" && houseItem === "rock") ||
+		(userItem === "scissors" && houseItem === "paper")
+	) {
+		playAgainBox.classList.add("active-play-again-box");
+		playAgainBox.innerHTML = `<p class="play-again-text">YOU WIN</p>
+		<button class="play-again-btn">play again</button>`;
+	} else {
+		playAgainBox.classList.add("active-play-again-box");
+		playAgainBox.innerHTML = `<p class="play-again-text">YOU LOSE</p>
+		<button class="play-again-btn">play again</button>`;
+	}
+
+	const playAgainBtn = playAgainBox.querySelector(".play-again-btn");
+	playAgainBtn.addEventListener("click", playAgain);
+};
+
+const playAgain = () => {
+	gameItemsBox.classList.remove("hide-gime-items");
+	fightGameBox.classList.remove("show-fight-game-box");
+	playAgainBox.innerHTML = "";
+	userItemSelect.innerHTML = "";
+	houseItemSelect.innerHTML = "";
 };
 
 rulesBtn.addEventListener("click", showModal);
