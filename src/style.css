@@ -88,6 +88,19 @@ body.modal-open::before {
 	padding: 0.2em;
 }
 
+.clear-score-btn {
+	padding: 0.8em;
+	border: none;
+	border-radius: 12px;
+	box-shadow: hsl(229, 64%, 46%) 0px 1px 3px, hsl(229, 64%, 46%) 0px 1px 2px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	letter-spacing: 1.2px;
+	color: hsl(229, 64%, 46%);
+	cursor: pointer;
+
+}
+
 /* MAIN */
 
 .game-items-box {
