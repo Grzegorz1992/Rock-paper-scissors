@@ -16,9 +16,9 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background: radial-gradient(circle, rgb(15, 21, 41) 0%, rgb(13, 20, 40) 100%);
 	font-family: "Barlow Semi Condensed", sans-serif;
 	font-size: 1.6rem;
+	background: radial-gradient(circle, rgb(15, 21, 41) 0%, rgb(13, 20, 40) 100%);
 }
 
 body.modal-open::before {
@@ -68,16 +68,16 @@ body.modal-open::before {
 }
 
 .score-title {
+	color: hsl(229, 64%, 46%);
 	font-size: 1.8rem;
 	font-weight: bold;
 	letter-spacing: 2px;
-	color: hsl(229, 64%, 46%);
 }
 
 .game-score {
+	color: hsl(229, 25%, 31%);
 	font-size: 2.2rem;
 	font-weight: bold;
-	color: hsl(229, 25%, 31%);
 }
 
 .game-score p {
@@ -90,14 +90,20 @@ body.modal-open::before {
 
 .clear-score-btn {
 	padding: 0.8em;
-	border: none;
-	border-radius: 12px;
-	box-shadow: hsl(229, 64%, 46%) 0px 1px 3px, hsl(229, 64%, 46%) 0px 1px 2px;
+	color: hsl(229, 64%, 46%);
 	font-size: 1.2rem;
 	font-weight: bold;
 	letter-spacing: 1.2px;
-	color: hsl(229, 64%, 46%);
+	border: none;
+	border-radius: 12px;
+	box-shadow: hsl(229, 64%, 46%) 0px 1px 3px, hsl(229, 64%, 46%) 0px 1px 2px;
+	transition: color 0.3s, background-color 0.3s;
 	cursor: pointer;
+}
+
+.clear-score-btn:hover {
+	color: #fff;
+	background-color: hsl(229, 64%, 46%);
 }
 
 /* MAIN */
