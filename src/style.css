@@ -39,8 +39,8 @@ body.modal-open::before {
 	justify-content: space-between;
 	align-items: center;
 	margin: 8rem;
-	padding: 1em;
-	width: 60rem;
+	padding: 1.4em;
+	width: 70rem;
 	color: #fff;
 	border: 3px solid hsl(217, 16%, 45%);
 	border-radius: 12px;
@@ -49,9 +49,9 @@ body.modal-open::before {
 .game-title {
 	display: flex;
 	flex-direction: column;
-	font-size: 2.4rem;
+	font-size: 4rem;
 	font-weight: bold;
-	line-height: 2rem;
+	line-height: 4rem;
 }
 
  .game-score-box {
