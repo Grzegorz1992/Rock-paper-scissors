@@ -26,7 +26,10 @@ const gameItemsBox = document.querySelector(".game-items-box");
 const userItemSelect = document.querySelector(".user-choice");
 const houseItemSelect = document.querySelector(".house-choice");
 const playAgainBox = document.querySelector(".play-again-box");
-const gameScore = document.querySelector(".game-result");
+const userResult = document.querySelector('.user-result')
+const houseResult = document.querySelector('.house-result')
+
+
 
 
 
