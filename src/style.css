@@ -128,6 +128,7 @@ body.modal-open::before {
 	grid-column: 2/3;
 	background-color: rgb(43, 127, 212);
 	box-shadow: rgb(10, 112, 213) 0px 22px 70px 20px;
+	transition: box-shadow .9s;
 }
 
 .rock-item {
@@ -135,13 +136,22 @@ body.modal-open::before {
 	grid-row: 2/3;
 	background-color: rgb(214, 118, 39);
 	box-shadow: rgb(177, 94, 25) 0px 22px 70px 20px;
+	transition: box-shadow .9s;
 }
 
 .scissors-item {
 	grid-column: 4/ 5;
 	background-color: rgb(199, 45, 45);
 	box-shadow: rgb(201, 20, 20) 0px 22px 70px 20px;
+	transition: box-shadow .9s;
 }
+
+.paper-item:hover,
+.rock-item:hover,
+.scissors-item:hover {
+	box-shadow: none;
+}
+
 .image-container {
 	background-color: white;
 	padding: 1.8em;
