@@ -28,6 +28,7 @@ const houseItemSelect = document.querySelector(".house-choice");
 const playAgainBox = document.querySelector(".play-again-box");
 const userResult = document.querySelector(".user-result");
 const houseResult = document.querySelector(".house-result");
+const clearScoreBtn = document.querySelector('.clear-score-btn')
 let userScore = 0;
 let houseScore = 0;
 
@@ -139,3 +140,11 @@ window.addEventListener("load", () => {
 rulesBtn.addEventListener("click", showModal);
 closeModalBtn.addEventListener("click", closeModal);
 rpsItems.forEach((item) => item.addEventListener("click", userChoice));
+clearScoreBtn.addEventListener('click', () => {
+	userScore = 0;
+	houseScore = 0;
+	userResult.textContent = userScore;
+	houseResult.textContent = houseScore;
+	localStorage.clear()
+
+})
