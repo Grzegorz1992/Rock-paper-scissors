@@ -39,7 +39,7 @@ body.modal-open::before {
 	justify-content: space-between;
 	align-items: center;
 	margin: 8rem;
-	padding: 2em;
+	padding: 1em;
 	width: 60rem;
 	color: #fff;
 	border: 3px solid hsl(217, 16%, 45%);
@@ -54,12 +54,12 @@ body.modal-open::before {
 	line-height: 2rem;
 }
 
-.game-score {
+ .game-score-box {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 0.5em;
-	width: 12rem;
+	gap: 5px;
+	padding: 1em;
 	background-color: #f4f0f0;
 	border-radius: 6px;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -67,17 +67,25 @@ body.modal-open::before {
 		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.score-span {
-	font-size: 1.2rem;
+.score-title {
+	font-size: 1.8rem;
 	font-weight: bold;
 	letter-spacing: 2px;
 	color: hsl(229, 64%, 46%);
 }
 
-.game-result {
-	font-size: 5rem;
+.game-score {
+	font-size: 2.2rem;
 	font-weight: bold;
 	color: hsl(229, 25%, 31%);
+} 
+
+.game-score p {
+	padding: 0.2em;
+}
+
+.game-score span {
+	padding: 0.2em;
 }
 
 /* MAIN */
