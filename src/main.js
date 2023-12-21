@@ -31,6 +31,15 @@ const houseResult = document.querySelector(".house-result");
 let userScore = 0;
 let houseScore = 0;
 
+const getScoreFromLocalStorage = (key) => {
+	const storedScore = localStorage.getItem(key);
+	return storedScore ? parseInt(storedScore, 10) : 0;
+};
+
+const updateScoreInLocalStorage = (key, newScore) => {
+	localStorage.setItem(key, newScore.toString());
+};
+
 const showModal = () => {
 	rulesModal.classList.add("active");
 	body.classList.add("modal-open");
@@ -77,6 +86,8 @@ const houseChoice = () => {
 	}
 };
 
+
+
 const gameResult = () => {
 	const userItem = userItemSelect.querySelector(".fight-game-item").id;
 	const houseItem = houseItemSelect.querySelector(".fight-game-item").id;
@@ -94,16 +105,16 @@ const gameResult = () => {
 		playAgainBox.innerHTML = `<p class="play-again-text">YOU WIN</p>
 		<button class="play-again-btn">play again</button>`;
 		userScore++;
+		userResult.textContent = userScore;
+		updateScoreInLocalStorage("userScore", userScore);
 	} else {
 		playAgainBox.classList.add("active-play-again-box");
 		playAgainBox.innerHTML = `<p class="play-again-text">YOU LOSE</p>
 		<button class="play-again-btn">play again</button>`;
 		houseScore++;
+		houseResult.textContent = houseScore;
+		updateScoreInLocalStorage("houseScore", houseScore);
 	}
-
-	houseResult.textContent = houseScore;
-
-	userResult.textContent = userScore;
 
 	const playAgainBtn = playAgainBox.querySelector(".play-again-btn");
 	playAgainBtn.addEventListener("click", playAgain);
@@ -116,6 +127,14 @@ const playAgain = () => {
 	userItemSelect.innerHTML = "";
 	houseItemSelect.innerHTML = "";
 };
+
+
+window.addEventListener("load", () => {
+	userScore = getScoreFromLocalStorage("userScore");
+	houseScore = getScoreFromLocalStorage("houseScore");
+	userResult.textContent = userScore;
+	houseResult.textContent = houseScore;
+});
 
 rulesBtn.addEventListener("click", showModal);
 closeModalBtn.addEventListener("click", closeModal);
