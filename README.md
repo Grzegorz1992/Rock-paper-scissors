@@ -23,4 +23,4 @@
 
   https://rpsmine.netlify.app/
 
-     Enjoy playing! Have fun!
+  Enjoy playing! Have fun!
