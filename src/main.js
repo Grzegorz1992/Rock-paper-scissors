@@ -29,8 +29,8 @@ const playAgainBox = document.querySelector(".play-again-box");
 const userResult = document.querySelector(".user-result");
 const houseResult = document.querySelector(".house-result");
 const clearScoreBtn = document.querySelector('.clear-score-btn')
-let userScore = 0;
 let houseScore = 0;
+let userScore = 0;
 
 const getScoreFromLocalStorage = (key) => {
 	const storedScore = localStorage.getItem(key);
