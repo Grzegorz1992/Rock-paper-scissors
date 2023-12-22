@@ -4,11 +4,10 @@
 
 ### Technologies I used
 
-1.HTML5
-2.CSS
-3.JavaScript
-4.Vite
-
+1. HTML5
+2. CSS
+3. JavaScript
+4. Vite
 
 ### Description
 
