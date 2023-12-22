@@ -1,16 +1,16 @@
-#ROCK - PAPER - SCISSORS
+# ROCK - PAPER - SCISSORS
 
-##This is my version of the game from Frontend Mentor - Rock, Paper, Scissors
+## This is my version of the game from Frontend Mentor - Rock, Paper, Scissors
 
-###Technologies I used
+### Technologies I used
 
-⋅⋅* HTML5
-⋅⋅* CSS
-⋅⋅* JavaScript
-⋅⋅* Vite
+1.HTML5
+2.CSS
+3.JavaScript
+4.Vite
 
 
-###Description
+### Description
 
 - The game is very simple: choose rock, paper, or scissors and wait for the computer choice!
 -  In my project, I made several changes compared to the Frontend Mentor template:
