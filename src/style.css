@@ -19,6 +19,7 @@ body {
 	font-family: "Barlow Semi Condensed", sans-serif;
 	font-size: 1.6rem;
 	background: radial-gradient(circle, rgb(15, 21, 41) 0%, rgb(13, 20, 40) 100%);
+	overflow: hidden;
 }
 
 body.modal-open::before {
@@ -38,7 +39,8 @@ body.modal-open::before {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 8rem;
+	margin: 1rem;
+	margin-bottom: 3rem;
 	padding: 1.4em;
 	width: 70rem;
 	color: #fff;
@@ -95,7 +97,7 @@ body.modal-open::before {
 	font-weight: bold;
 	letter-spacing: 1.2px;
 	border: none;
-	border-radius: 12px;
+	border-radius: 6px;
 	box-shadow: hsl(229, 64%, 46%) 0px 1px 3px, hsl(229, 64%, 46%) 0px 1px 2px;
 	transition: color 0.3s, background-color 0.3s;
 	cursor: pointer;
@@ -122,13 +124,15 @@ body.modal-open::before {
 .game-item {
 	padding: 1.2em;
 	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
 }
 
 .paper-item {
 	grid-column: 2/3;
 	background-color: rgb(43, 127, 212);
 	box-shadow: rgb(10, 112, 213) 0px 22px 70px 20px;
-	transition: box-shadow .9s;
+	transition: box-shadow 0.9s;
 }
 
 .rock-item {
@@ -136,14 +140,14 @@ body.modal-open::before {
 	grid-row: 2/3;
 	background-color: rgb(214, 118, 39);
 	box-shadow: rgb(177, 94, 25) 0px 22px 70px 20px;
-	transition: box-shadow .9s;
+	transition: box-shadow 0.9s;
 }
 
 .scissors-item {
 	grid-column: 4/ 5;
 	background-color: rgb(199, 45, 45);
 	box-shadow: rgb(201, 20, 20) 0px 22px 70px 20px;
-	transition: box-shadow .9s;
+	transition: box-shadow 0.9s;
 }
 
 .paper-item:hover,
@@ -153,16 +157,16 @@ body.modal-open::before {
 }
 
 .image-container {
-	background-color: white;
 	padding: 1.8em;
+	background-color: white;
 	border-radius: 50%;
 	box-shadow: inset 0px 8px 5px rgb(154, 153, 153);
 	cursor: pointer;
 }
 
 .game-image {
-	font-size: 6rem;
 	color: hsl(217, 16%, 45%);
+	font-size: 6rem;
 }
 
 .fa-solid {
@@ -178,13 +182,13 @@ body.modal-open::before {
 .rules-btn {
 	grid-column: 5/6;
 	grid-row: 3/4;
+	color: #fff;
 	width: 100px;
 	height: 40px;
+	letter-spacing: 3px;
 	background: none;
 	border: 2px solid #fff;
 	border-radius: 6px;
-	color: #fff;
-	letter-spacing: 3px;
 	cursor: pointer;
 }
 
@@ -234,9 +238,9 @@ body.modal-open::before {
 	background-image: url("../public/images/icon-close.svg");
 	width: 20px;
 	height: 20px;
-	border: none;
 	font-size: 2rem;
 	font-weight: bold;
+	border: none;
 	cursor: pointer;
 }
 
@@ -289,7 +293,7 @@ body.modal-open::before {
 }
 
 .play-again-btn {
-	padding: 0.5em;
+	padding: 0.5em 2em;
 	color: hsl(229, 64%, 46%);
 	background-color: #fff;
 	font-size: 1.6rem;
@@ -297,7 +301,7 @@ body.modal-open::before {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	border: none;
-	border-radius: 12px;
+	border-radius: 6px;
 	box-shadow: rgba(193, 195, 218, 0.3) 0px 30px 60px -12px inset,
 		hsl(229, 64%, 46%) 0px 18px 36px -18px inset;
 	cursor: pointer;
@@ -311,6 +315,7 @@ body.modal-open::before {
 .fight-game-item {
 	padding: 1.6em;
 	border-radius: 50%;
+	pointer-events: none;
 }
 
 .fight-image-container {
@@ -324,4 +329,132 @@ body.modal-open::before {
 .fight-game-image {
 	color: hsl(217, 16%, 45%);
 	font-size: 8rem;
+}
+
+/* MEDIA */
+
+@media only screen and (max-width: 900px) {
+	/* HEADER */
+
+	.header {
+		margin: 1rem;
+		margin-bottom: 3rem;
+		padding: 0.8em;
+		width: 30rem;
+	}
+
+	.game-title {
+		font-size: 2rem;
+		line-height: 2rem;
+	}
+
+	.game-score-box {
+		padding: 0.7em;
+	}
+
+	.score-title {
+		font-size: 1.2rem;
+		letter-spacing: 1px;
+	}
+
+	.game-score {
+		font-size: 1.6rem;
+	}
+
+	.clear-score-btn {
+		font-size: 1rem;
+		letter-spacing: 1px;
+	}
+
+	/* MAIN */
+
+	.game-items-box {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+		gap: 0px;
+	}
+
+	.game-item {
+		padding: 0.6em;
+	}
+
+	.paper-item {
+		grid-column: 1/2;
+		box-shadow: rgb(10, 112, 213) 0px 15px 50px 10px;
+	}
+
+	.rock-item {
+		grid-column: 2/3;
+		grid-row: 2/3;
+		box-shadow: rgb(177, 94, 25) 0px 15px 50px 10px;
+	}
+
+	.scissors-item {
+		grid-column: 3/4;
+		box-shadow: rgb(201, 20, 20) 0px 15px 50px 10px;
+	}
+
+	.image-container {
+		padding: 1em;
+		box-shadow: inset 0px 5px 5px rgb(154, 153, 153);
+	}
+
+	.game-image {
+		font-size: 5.4rem;
+	}
+
+	.rules-btn {
+		grid-column: 2/3;
+		grid-row: 4/5;
+		width: 90px;
+		height: 30px;
+		letter-spacing: 2px;
+		border: 1px solid #fff;
+	}
+
+	/* RULES MODAL */
+
+	.modal-rules-box {
+		gap: 20px;
+		padding: 1.4em;
+	}
+
+	/* ACTIVE GAME BOX */
+
+	.fight-game-box {
+		gap: 50px;
+	}
+
+	.user-choice-items {
+		gap: 10px;
+	}
+
+	.house-choice-items {
+		gap: 10px;
+	}
+
+	.fight-game-text {
+		letter-spacing: 1px;
+	}
+
+	.play-again-box {
+		position: absolute;
+		top: 65%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		gap: 15px;
+	}
+
+	.fight-game-item {
+		padding: 1em;
+	}
+
+	.fight-image-container {
+		padding: 1em;
+		box-shadow: inset 0px 5px 5px rgb(154, 153, 153);
+	}
+
+	.fight-game-image {
+		font-size: 8rem;
+	}
 }
